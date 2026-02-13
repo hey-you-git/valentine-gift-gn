@@ -1,0 +1,498 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Montserrat', sans-serif;
+    background:white;
+    overflow:hidden;
+}
+
+/* Sections */
+.section{
+    display:none;
+    height:100vh;
+    justify-content:center;
+    align-items:center;
+}
+
+.section.active{
+    display:flex;
+    animation:fadeIn 1s ease;
+}
+
+/* Card */
+.card{
+    width:750px;
+    padding:70px;
+    text-align:center;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 25px 70px rgba(0,0,0,0.08);
+}
+
+/* Titles */
+.small-title{
+    letter-spacing:6px;
+    font-size:13px;
+    margin-bottom:30px;
+    color:#c4002f;
+}
+
+.script-text{
+    font-family:'Allura', cursive;
+    font-size:56px;
+    margin-bottom:30px;
+    color:#c4002f;
+}
+
+.script-text1{
+    font-family:'Allura', cursive;
+    font-size:40px;
+    margin-bottom:30px;
+    color:#c4002f;
+}
+
+/* Text */
+.message{
+    /* font-family:'Playfair Display', serif; */
+    font-size:17px;
+    line-height:2.1;
+    letter-spacing:0.5px;
+    color:#333;
+    margin-bottom:30px;
+    margin-top: 30px;
+}
+
+/* Images */
+.image-box img{
+    width:100%;
+    max-height:400px;
+    object-fit:contain;
+    margin-bottom:30px;
+}
+
+/* Career images */
+.career-gallery{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-bottom:30px;
+}
+
+.career-gallery img{
+    width:45%;
+    max-height:400px;
+    object-fit:contain;
+}
+
+/* Buttons */
+button{
+    padding:14px 35px;
+    border:1px solid #c4002f;
+    background:white;
+    letter-spacing:2px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#c4002f;
+    color:white;
+}
+
+.proposal-buttons{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin-top:30px;
+}
+
+.yes{
+    border-color:#c4002f;
+}
+
+.no {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+
+/* Animation */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* SECTION TRANSITION */
+.section {
+    display:none;
+    height:100vh;
+    align-items:center;
+    justify-content:center;
+}
+
+.section.active {
+    display:flex;
+    animation:fadeIn 1.2s ease;
+}
+
+/* IMAGE FULL FIT */
+.image-box img {
+    max-width:100%;
+    max-height:400px;
+    object-fit:contain;
+    border-radius:8px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* CAREER GALLERY */
+.career-gallery {
+    display:flex;
+    gap:30px;
+    justify-content:center;
+}
+
+.career-gallery img {
+    width:250px;
+    object-fit:contain;
+}
+
+/* PROPOSAL BUTTONS */
+.proposal-buttons {
+    margin-top:25px;
+}
+
+.proposal-buttons button {
+    margin:10px;
+}
+
+/* HEART CONFETTI */
+.heart-confetti {
+    position:fixed;
+    top:-10px;
+    font-size:22px;
+    animation:fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform:translateY(110vh);
+        opacity:0;
+    }
+}
+
+/* HEART CURSOR */
+body {
+    cursor:url('https://cdn-icons-png.flaticon.com/512/833/833472.png'), auto;
+}
+
+.intro-note1 {
+    font-size:12px;
+    letter-spacing:3px;
+    /* color:#999; */
+    margin-bottom:25px;
+    font-family:'Montserrat', sans-serif;
+}
+
+/* blinking cursor */
+.intro-note1::after {
+    content: "|";
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.story-container {
+    width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.story-row {
+    display:flex;
+    align-items:center;
+    gap:40px;
+    margin-bottom:80px;
+    justify-content:center;
+}
+
+.story-row.reverse {
+    flex-direction:row-reverse;
+}
+
+.story-img {
+    width:320px;
+    max-height:420px;
+    object-fit:contain;
+    border-radius:10px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.story-text {
+    max-width:350px;
+    text-align:left;
+}
+
+.story-text h2 {
+    font-family:'Playfair Display';
+    margin-bottom:15px;
+    font-size:26px;
+}
+
+.story-text p {
+    font-family:'Montserrat';
+    line-height:1.8;
+    color:#444;
+}
+
+/* ===== STORY PAGE ===== */
+
+.story-page{
+    align-items:flex-start;
+    overflow-y:auto;
+    padding:50px 0;
+}
+
+.story-container{
+    width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.story-block{
+    margin-top:60px;
+}
+
+.story-row{
+    display:flex;
+    align-items:center;
+    gap:50px;
+    margin-bottom:70px;
+    justify-content:center;
+}
+
+.story-row.reverse{
+    flex-direction:row-reverse;
+}
+
+/* IMPORTANT: NO CROP */
+.story-img{
+    max-width:250px;
+    height:auto;
+    border-radius:12px;
+    object-fit:contain;
+    box-shadow:0 15px 40px rgba(0,0,0,0.2);
+}
+
+.story-text{
+    max-width:350px;
+    font-size:18px;
+    line-height:2;
+    text-align:left;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:768px){
+
+
+.story-container{
+    width:95%;
+}
+
+.story-row{
+    flex-direction:column !important;
+    text-align:center;
+}
+
+.story-text{
+    max-width:100%;
+}
+
+.story-img{
+    max-width:90%;
+}
+
+.photo-card{
+    padding:25px;
+    margin:20px;
+  }
+
+  .photo-row{
+    flex-direction:column;
+    text-align:center;
+    gap:20px;
+  }
+
+  .photo-row.reverse{
+    flex-direction:column;
+  }
+
+  .photo-row img,
+  .photo-text{
+    width:100%;
+  }
+
+   button {
+        font-size: 12px;
+        padding: 9px 16px;
+        max-width: 85%;
+    }
+
+    .proposal-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+.photo-card{
+  max-width:1100px;
+  margin:40px auto;
+  padding:30px 40px;
+  background:rgba(255,255,255,0.92);
+  border-radius:25px;
+
+  /* Softer shadow */
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+
+  backdrop-filter: blur(8px);
+}
+/* YES PAGE SPECIAL STYLE */
+.yes-section{
+  background: linear-gradient(135deg,#ff4d6d,#ff758f);
+  color:white;
+  overflow:hidden;
+}
+
+/* YES CARD STYLE */
+.yes-card{
+  background:white;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* FLOATING HEARTS */
+.yes-section .hearts{
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  pointer-events:none;
+}
+
+.yes-section .hearts span{
+  position:absolute;
+  bottom:-50px;
+  font-size:28px;
+  animation: floatHearts 6s linear infinite;
+}
+
+/* random positions */
+.yes-section .hearts span:nth-child(1){left:10%; animation-delay:0s;}
+.yes-section .hearts span:nth-child(2){left:20%; animation-delay:2s;}
+.yes-section .hearts span:nth-child(3){left:35%; animation-delay:1s;}
+.yes-section .hearts span:nth-child(4){left:50%; animation-delay:3s;}
+.yes-section .hearts span:nth-child(5){left:65%; animation-delay:2s;}
+.yes-section .hearts span:nth-child(6){left:80%; animation-delay:4s;}
+.yes-section .hearts span:nth-child(7){left:90%; animation-delay:1s;}
+
+@keyframes floatHearts{
+  0%{
+    transform:translateY(0) scale(1);
+    opacity:1;
+  }
+  100%{
+    transform:translateY(-110vh) scale(1.4);
+    opacity:0;
+  }
+}
+
+.yes {
+    border-color: #c4002f;;
+    font-weight: 600;
+}
+
+.yes:hover {
+    background: #c4002f;
+    color: white;
+}
+
+.proposal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.proposal-buttons button {
+    min-width: 180px;
+}
+
+/* ===== UNIVERSAL BUTTON STYLE ===== */
+button {
+    padding: 16px 28px;
+    border: 2px solid #c4002f;
+    background: white;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    border-radius: 50px;
+
+    /* IMPORTANT FOR BIG TEXT */
+    white-space: normal;
+    max-width: 260px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* Hover romantic effect */
+button:hover {
+    background: #c4002f;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(196, 0, 47, 0.35);
+}
+
+button {
+    padding: 10px 20px;
+    border: 1px solid #c4002f;
+    background: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+
+    /* Handle long text but stay compact */
+    max-width: 200px;
+    white-space: normal;
+    line-height: 1.3;
+}
+
+button:hover {
+    background: #c4002f;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(196, 0, 47, 0.25);
+}
+.proposal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.proposal-buttons button {
+    min-width: 140px;
+}
